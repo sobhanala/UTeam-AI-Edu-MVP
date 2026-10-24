@@ -1,0 +1,119 @@
+@use './mixins';
+
+.container {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	@include mixins.breakpoint(sm) {
+		max-width: 540px;
+	}
+	@include mixins.breakpoint(md) {
+		max-width: 720px;
+	}
+	@include mixins.breakpoint(lg) {
+		max-width: 960px;
+	}
+	@include mixins.breakpoint(xl) {
+		max-width: 1160px;
+	}
+}
+
+.container-fluid {
+	width: 100%;
+	padding: 0;
+	@include mixins.breakpoint(md) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.d-none {
+	display: none !important;
+}
+
+.d-block {
+	display: block !important;
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+.d-sm-none {
+	@include mixins.breakpoint(sm) {
+		display: none !important;
+	}
+}
+
+.d-sm-block {
+	@include mixins.breakpoint(sm) {
+		display: block !important;
+	}
+}
+
+.d-sm-flex {
+	@include mixins.breakpoint(sm) {
+		display: flex !important;
+	}
+}
+
+.d-md-none {
+	@include mixins.breakpoint(md) {
+		display: none !important;
+	}
+}
+
+.d-md-block {
+	@include mixins.breakpoint(md) {
+		display: block !important;
+	}
+}
+
+.d-md-flex {
+	@include mixins.breakpoint(md) {
+		display: flex !important;
+	}
+}
+
+.d-lg-none {
+	@include mixins.breakpoint(lg) {
+		display: none !important;
+	}
+}
+
+.d-lg-block {
+	@include mixins.breakpoint(lg) {
+		display: block !important;
+	}
+}
+
+.d-lg-flex {
+	@include mixins.breakpoint(lg) {
+		display: flex !important;
+	}
+}
+
+.d-xl-none {
+	@include mixins.breakpoint(xl) {
+		display: none !important;
+	}
+}
+
+.d-xl-block {
+	@include mixins.breakpoint(xl) {
+		display: block !important;
+	}
+}
+
+.d-xl-flex {
+	@include mixins.breakpoint(xl) {
+		display: flex !important;
+	}
+}

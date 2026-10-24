@@ -1,0 +1,88 @@
+@use 'mixins';
+@use 'colors';
+
+@keyframes example {
+	from {
+		left: 0;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+.toastContainer {
+	position: fixed;
+	top: 80px;
+	z-index: 4000;
+	padding: 0;
+	width: 312px;
+	right: 50%;
+	transform: translateX(50%);
+	& > .toast {
+		width: 100%;
+		color: white;
+		position: relative;
+		min-height: 48px;
+		background-color: #3b3b3b;
+		display: flex;
+		padding: 12px;
+		padding-left: 28px;
+		border-radius: 9px;
+		align-items: center;
+		margin: 8px 0;
+
+		.backGround {
+			width: 24px;
+			height: 24px;
+			margin-left: 8px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.msg {
+			flex: 1;
+		}
+		&.Success {
+			.backGround {
+				background-image: url(/images/toast/Success.svg);
+			}
+		}
+		&.Info {
+			.backGround {
+				background-image: url(/images/toast/info.svg);
+			}
+		}
+		&.Warning {
+			.backGround {
+				background-image: url(/images/toast/warning.svg);
+			}
+		}
+		&.Error {
+			.backGround {
+				background-image: url(/images/toast/error.svg);
+			}
+		}
+		& > .close {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: 10px;
+			cursor: pointer;
+		}
+		& > .progressbar {
+			position: absolute;
+			bottom: 0;
+			left: 100%;
+			right: 0;
+			height: 6px;
+			background-color: white;
+			opacity: 0.5;
+			animation-name: example;
+			animation-duration: 5.2s;
+		}
+	}
+	@include mixins.breakpoint(lg) {
+		transform: translateX(0);
+		left: 40px;
+		right: unset;
+	}
+}

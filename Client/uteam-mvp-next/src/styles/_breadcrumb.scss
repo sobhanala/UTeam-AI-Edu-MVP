@@ -1,0 +1,40 @@
+@use 'dimensions';
+@use 'colors';
+
+.breadcrumbContainer {
+	background-color: #fcfcfa;
+	height: 50px;
+	box-sizing: border-box;
+	padding: 0 15px;
+	.breadcrumb {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		list-style-type: none;
+		margin-top: 0;
+		margin-bottom: 0;
+		height: 50px;
+		box-sizing: border-box;
+		& > .breadcrumb-item {
+			padding: 0 0 0 16px;
+			display: inline-block;
+			font-size: dimensions.$font-size-xs;
+			white-space: nowrap;
+			color: colors.$text-primary;
+			position: relative;
+			line-height: 50px;
+			&::after {
+				position: absolute;
+				left: 5px;
+				content: '/';
+				color: colors.$text-secondary;
+			}
+		}
+		& > .breadcrumb-item:last-child {
+			&::after {
+				content: '';
+			}
+		}
+	}
+}

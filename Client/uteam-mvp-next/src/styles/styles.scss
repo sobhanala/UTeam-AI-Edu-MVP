@@ -1,0 +1,71 @@
+@use 'base';
+@use 'grids';
+@use 'breadcrumb';
+@use 'fonts';
+@use 'richcontent';
+@use 'customeSwiper.scss';
+@use 'slideSwiper.scss';
+
+// Home Page Styles
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "iranyekan", "Vazir", "Tahoma", sans-serif;
+  direction: rtl;
+}
+
+.home-content {
+  text-align: center;
+  justify-self: center;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  
+  h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+}
+
+// Chatbot Button Styles
+.chatbot-button {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  font-family: "iranyekan", "Vazir", "Tahoma", sans-serif;
+  direction: rtl;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
